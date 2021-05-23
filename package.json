@@ -1,0 +1,41 @@
+{
+  "name": "excel-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development webpack serve --hot",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skyortl/excel-course.git"
+  },
+  "author": "Davyd Bukhbinder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skyortl/excel-course/issues"
+  },
+  "homepage": "https://github.com/Skyortl/excel-course#readme",
+  "browserslist": ">0.25%, not dead",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.1",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "cross-env": "^7.0.3",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
