@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development webpack serve --hot",
+    "serve": "cross-env NODE_ENV=development webpack serve --hot",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "repository": {
@@ -36,6 +36,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "cross-env": "^7.0.3",
+    "normalize.css": "^8.0.1",
     "webpack-dev-server": "^3.11.2"
   }
 }

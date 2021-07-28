@@ -1,0 +1,35 @@
+@mixin button($color: green) {
+  height: 24px;
+  min-width: 24px;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.7);
+
+  & > i {
+    font-size: 18px;
+  }
+  &:active, &.active {
+    color: $color;
+  }
+  &:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+  @include text-selection();
+}
+
+@mixin text-selection($mode: none) {
+  user-select: $mode;
+  -webkit-user-select: $mode;
+  -khtml-user-select: $mode;
+  -moz-user-select: $mode;
+  -ms-user-select: $mode;
+}
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
