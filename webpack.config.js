@@ -9,19 +9,19 @@ const isDev = !isProd;
 
 const bundleFilename = extension => isProd ? `bundle.[hash].${extension}` : `bundle.${extension}`;
 
-// function jsLoaders() {
-//     const loaders = [{
-//         loader: 'babel-loader',
-//         options: {
-//             presets: ['@babel/preset-env']
-//         }
-//     }];
-//
-//     if (isDev) {
-//
-//     }
-//     return [];
-// }
+function jsLoaders() {
+    const loaders = [{
+        loader: 'babel-loader',
+        options: {
+            presets: ['@babel/preset-env']
+        }
+    }];
+
+    if (isDev) {
+
+    }
+    return [];
+}
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
