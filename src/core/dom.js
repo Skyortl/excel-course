@@ -20,16 +20,30 @@ class Dom {
         return this
     }
 
+    on(eventType, callback) {
+        this.$el.addEventListener(eventType, callback)
+        return this
+    }
+
+    off(eventType, callback) {
+        this.$el.removeEventListener(eventType, callback)
+        return this
+    }
+
     toString() {
         return this.$el.innerHTML
     }
 
     append(node) {
+        if (node instanceof Dom) {
+            node = node.$el
+        }
         if (Element.prototype.append) {
             this.$el.append(node)
-            return
+        } else {
+            this.$el.appendChild(node)
         }
-        this.$el.appendChild(node)
+        return this
     }
 }
 
